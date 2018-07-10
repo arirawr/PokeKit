@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        PokeKit.shared.getPokemon(id: 7, queryParams: nil, callback: { pokemon in
+        PokeKit.shared.getPokemon(id: 7, callback: { pokemon in
             print(pokemon.name)
         })
     }

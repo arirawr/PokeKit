@@ -8,21 +8,15 @@
 
 import Foundation
 
-struct APIResponse {
-    let error: Error?
-    let result: [String: AnyObject]?
-}
-
 public class PokeKit {
     static let shared = PokeKit()
 
     typealias PKQueryParam = [String: String]
 
-    func createPokeKitRequest<T: Codable>(path: String, params: [PKQueryParam]?, finished: @escaping (T) -> Void) {
+    func createPKRequest<T: Codable>(path: String, params: [PKQueryParam]?, callback: @escaping (T) -> Void) {
 
         // Configure the request
         let urlString = "https://pokeapi.co/api/v2/\(path)"
-        print(urlString)
 
         var request = URLRequest(url: URL(string: urlString)!)
         request.httpMethod = "GET"
@@ -35,15 +29,16 @@ public class PokeKit {
 
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
+
             guard let decodedData = try? decoder.decode(T.self, from: data) else { print("Could not decode data"); return }
-            finished(decodedData)
+            callback(decodedData)
         })
 
         task.resume()
     }
 
-    // temp
-    func getPokemon(id: Int, queryParams: [PKQueryParam]?, callback: @escaping ((Pokemon) -> Void)) {
-        createPokeKitRequest(path: "pokemon/\(id)", params: queryParams, finished: callback)
+    // testing fuction
+    func getPokemon(id: Int, queryParams: [PKQueryParam]? = nil, callback: @escaping ((Pokemon) -> Void)) {
+        createPKRequest(path: "pokemon/\(id)", params: queryParams, callback: callback)
     }
 }

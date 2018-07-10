@@ -42,6 +42,7 @@ extension PokeKit {
             public let ability: PokeKit.Ability
         }
 
+        // TODO
         struct Form: Codable {
 
         }

@@ -13,7 +13,6 @@
 		A7CA978520F4EED6005F8628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7CA978420F4EED6005F8628 /* Assets.xcassets */; };
 		A7CA978820F4EED6005F8628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7CA978620F4EED6005F8628 /* LaunchScreen.storyboard */; };
 		A7CA979020F4EFF9005F8628 /* PokeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CA978F20F4EFF9005F8628 /* PokeKit.swift */; };
-		A7CA979220F4F081005F8628 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CA979120F4F081005F8628 /* URLRequest+Extensions.swift */; };
 		A7CA979420F4F0FA005F8628 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CA979320F4F0FA005F8628 /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		A7CA978720F4EED6005F8628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7CA978920F4EED6005F8628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7CA978F20F4EFF9005F8628 /* PokeKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeKit.swift; sourceTree = "<group>"; };
-		A7CA979120F4F081005F8628 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		A7CA979320F4F0FA005F8628 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +82,6 @@
 		A7CA979620F4F10E005F8628 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A7CA979120F4F081005F8628 /* URLRequest+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -164,7 +161,6 @@
 				A7CA979020F4EFF9005F8628 /* PokeKit.swift in Sources */,
 				A7CA978020F4EED4005F8628 /* ViewController.swift in Sources */,
 				A7CA977E20F4EED4005F8628 /* AppDelegate.swift in Sources */,
-				A7CA979220F4F081005F8628 /* URLRequest+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
